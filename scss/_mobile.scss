@@ -1,0 +1,65 @@
+// Mobile
+
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: $color-violet;
+  }
+
+  .container {
+    max-width: 500px;
+    padding: 0;
+    background: $bg-mobile no-repeat center center/cover, $color-violet;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "mockup"
+      "main"
+      "social";
+    height: 100%;
+
+    #logo {
+      margin-top: 2rem;
+      padding: 1rem 0 0 2rem;
+      width: 50%;
+    }
+
+    #mockup {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      width: 90%;
+    }
+
+    .main {
+      text-align: center;
+      margin: auto;
+
+      h1 {
+        padding: 0;
+        font-size: 25px;
+      }
+      p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .btn {
+        margin: 2rem 0;
+      }
+    }
+
+    .socials {
+      font-size: 8px;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+  }
+}

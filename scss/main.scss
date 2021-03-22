@@ -1,0 +1,123 @@
+@import "config";
+
+// Reset values
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// General CSS
+
+Body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Utility CSS
+
+.container {
+  max-width: $max-width;
+  background: $bg-desktop no-repeat center center/cover, $color-violet;
+  margin: auto;
+  padding: 2rem 5rem;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 60px;
+  color: $color-violet;
+  border: 2px solid $color-violet;
+  border-radius: 40px;
+  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  font-size: 16px;
+
+  &:hover {
+    background: $color-soft-magenta;
+    color: #fff;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Main CSS
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "logo logo"
+    "mockup main"
+    "mockup social";
+  gap: 2rem;
+  height: 70vh;
+  margin: 3rem 0;
+  #logo {
+    grid-area: logo;
+  }
+  #mockup {
+    grid-area: mockup;
+    width: 100%;
+    // min-width: 400px;
+  }
+  .main {
+    color: #fff;
+    grid-area: main;
+    padding: 3rem 4rem 0 1rem;
+
+    h1 {
+      padding-right: 5rem;
+      font-weight: 600;
+      font-size: 36px;
+    }
+    p {
+      line-height: 2;
+      padding-right: 5rem;
+      margin: 1.5rem 0;
+    }
+  }
+  .socials {
+    grid-area: social;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #fff;
+    span:hover,
+    i:hover {
+      color: $color-soft-magenta;
+    }
+  }
+}
+// Footer
+
+.footer {
+  display: relative;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@import "mobile";

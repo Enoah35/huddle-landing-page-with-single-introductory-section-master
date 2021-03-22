@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+Body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  max-width: 1440px;
+  background: url(../images/bg-desktop.svg) no-repeat center center/cover, #674baf;
+  margin: auto;
+  padding: 2rem 5rem; }
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 60px;
+  color: #674baf;
+  border: 2px solid #674baf;
+  border-radius: 40px;
+  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  font-size: 16px; }
+  .btn:hover {
+    background: #e882e8;
+    color: #fff; }
+  .btn:focus {
+    outline: 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "logo logo" "mockup main" "mockup social";
+  gap: 2rem;
+  height: 70vh;
+  margin: 3rem 0; }
+  .grid #logo {
+    grid-area: logo; }
+  .grid #mockup {
+    grid-area: mockup;
+    width: 100%; }
+  .grid .main {
+    color: #fff;
+    grid-area: main;
+    padding: 3rem 4rem 0 1rem; }
+    .grid .main h1 {
+      padding-right: 5rem;
+      font-weight: 600;
+      font-size: 36px; }
+    .grid .main p {
+      line-height: 2;
+      padding-right: 5rem;
+      margin: 1.5rem 0; }
+  .grid .socials {
+    grid-area: social;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #fff; }
+    .grid .socials span:hover,
+    .grid .socials i:hover {
+      color: #e882e8; }
+
+.footer {
+  display: relative; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0; }
+  body {
+    background: #674baf; }
+  .container {
+    max-width: 500px;
+    padding: 0;
+    background: url(../images/bg-mobile.svg) no-repeat center center/cover, #674baf; }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "mockup" "main" "social";
+    height: 100%; }
+    .grid #logo {
+      margin-top: 2rem;
+      padding: 1rem 0 0 2rem;
+      width: 50%; }
+    .grid #mockup {
+      margin-top: 2rem;
+      padding-left: 2rem;
+      width: 90%; }
+    .grid .main {
+      text-align: center;
+      margin: auto; }
+      .grid .main h1 {
+        padding: 0;
+        font-size: 25px; }
+      .grid .main p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.5; }
+      .grid .main .btn {
+        margin: 2rem 0; }
+    .grid .socials {
+      font-size: 8px;
+      justify-content: center;
+      margin-bottom: 4rem; } }
